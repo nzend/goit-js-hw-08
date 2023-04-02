@@ -32,7 +32,6 @@ function createGalleryItem(itemsArray) {
 galleryList.addEventListener('click', onGalleryListClick);
 
 const link = document.querySelector('.gallery__link');
-console.log(link);
 
 function onGalleryListClick(evt) {
   evt.preventDefault();
