@@ -1,5 +1,5 @@
 import throttle from 'lodash.throttle';
-import '../css/common.css';
+import '../css/03-feedback.css';
 import '../css/03-feedback.css';
 
 const STORAGE_KEY = 'feedback-form-state';
@@ -36,7 +36,9 @@ function populateTextarea() {
 
 function onFormSubmit(evt) {
   evt.preventDefault();
-
+  if (refs.textarea.value.trim() === '' || refs.input.value.trim() === '') {
+    return alert('Please fill in all the fields!');
+  }
   evt.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
